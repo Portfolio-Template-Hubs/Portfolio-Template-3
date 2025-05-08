@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Prefers reduced motion media query support -->
+    <script>
+        // Check if the browser supports the prefers-reduced-motion media query
+        const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+        // Add a class to the document element based on the user's preference
+        document.documentElement.classList.toggle('reduced-motion', motionMediaQuery.matches);
+        // Listen for changes to the prefers-reduced-motion media query
+        motionMediaQuery.addEventListener('change', () => {
+            document.documentElement.classList.toggle('reduced-motion', motionMediaQuery.matches);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo" aria-label="Home">Portfolio</div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content parallax">
+                    <h1 class="fade-in" style="--delay: 0">Hi, I'm <span class="highlight bounce-in" style="--delay: 300">Your Name</span></h1>
+                    <p class="subtitle slide-in-left" style="--delay: 150">Web Developer & Designer</p>
+                    <p class="description slide-in-right" style="--delay: 300">I create beautiful, accessible, and responsive websites that deliver exceptional user experiences.</p>
+                    <div class="cta-buttons zoom-in" style="--delay: 450">
+                        <a href="#projects" class="btn primary-btn">View My Work</a>
+                        <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image slide-in-right">
+                    <div class="profile-image-container">
+                        <!-- Replace with your image -->
+                        <div class="profile-placeholder float" aria-label="Profile image"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text slide-in-left parallax">
+                        <p class="fade-in" style="--delay: 0">Hello! I'm a passionate web developer with a strong focus on creating accessible and user-friendly websites. I believe in the power of the web to connect people and ideas.</p>
+                        <p class="fade-in" style="--delay: 150">With expertise in HTML, CSS, and JavaScript, I build responsive websites that work seamlessly across all devices. I'm committed to web accessibility and ensuring that my projects can be used by everyone.</p>
+                        <p class="fade-in" style="--delay: 300">When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying the outdoors.</p>
+                    </div>
+                    <div class="about-stats slide-in-right parallax">
+                        <div class="stat-item pulse" data-count="5">
+                            <h3>5+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item pulse" data-count="50">
+                            <h3>50+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item pulse" data-count="30">
+                            <h3>30+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills" aria-label="Skills Section">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category" style="--delay: 1">
+                        <h3 class="zoom-in">Frontend Development</h3>
+                        <div class="skills-grid" role="list">
+                            <div class="skill-item" role="listitem" tabindex="0" style="--delay: 2">
+                                <div class="skill-icon" aria-hidden="true"><i class="fab fa-html5"></i></div>
+                                <h4>HTML5</h4>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-progress" data-progress="90%" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" role="listitem" tabindex="0" style="--delay: 3">
+                                <div class="skill-icon" aria-hidden="true"><i class="fab fa-css3-alt"></i></div>
+                                <h4>CSS3</h4>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-progress" data-progress="85%" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" role="listitem" tabindex="0" style="--delay: 4">
+                                <div class="skill-icon" aria-hidden="true"><i class="fab fa-js"></i></div>
+                                <h4>JavaScript</h4>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-progress" data-progress="80%" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" role="listitem" tabindex="0" style="--delay: 5">
+                                <div class="skill-icon" aria-hidden="true"><i class="fab fa-react"></i></div>
+                                <h4>React</h4>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-progress" data-progress="75%" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" style="--delay: 6">
+                        <h3 class="zoom-in">Other Skills</h3>
+                        <div class="skills-grid" role="list">
+                            <div class="skill-item" role="listitem" tabindex="0" style="--delay: 7">
+                                <div class="skill-icon" aria-hidden="true"><i class="fas fa-universal-access"></i></div>
+                                <h4>Accessibility</h4>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-progress" data-progress="90%" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" role="listitem" tabindex="0" style="--delay: 8">
+                                <div class="skill-icon" aria-hidden="true"><i class="fas fa-mobile-alt"></i></div>
+                                <h4>Responsive Design</h4>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-progress" data-progress="95%" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" role="listitem" tabindex="0" style="--delay: 9">
+                                <div class="skill-icon" aria-hidden="true"><i class="fas fa-code-branch"></i></div>
+                                <h4>Git</h4>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-progress" data-progress="85%" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" role="listitem" tabindex="0" style="--delay: 10">
+                                <div class="skill-icon" aria-hidden="true"><i class="fas fa-search"></i></div>
+                                <h4>SEO</h4>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-progress" data-progress="70%" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card flip-in" style="--delay: 150">
+                        <div class="project-image">
+                            <div class="project-placeholder" aria-label="Project screenshot"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-commerce Website</h3>
+                            <p>A fully responsive e-commerce platform with shopping cart functionality and payment integration.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small-btn" aria-label="View E-commerce Website Demo">Demo</a>
+                                <a href="#" class="btn small-btn" aria-label="View E-commerce Website Code">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card flip-in" style="--delay: 150">
+                        <div class="project-image">
+                            <div class="project-placeholder" aria-label="Project screenshot"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+                            <p>A modern portfolio website with smooth animations and accessibility features.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small-btn" aria-label="View Portfolio Website Demo">Demo</a>
+                                <a href="#" class="btn small-btn" aria-label="View Portfolio Website Code">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card flip-in" style="--delay: 150">
+                        <div class="project-image">
+                            <div class="project-placeholder" aria-label="Project screenshot"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Weather App</h3>
+                            <p>A weather application that displays current weather and forecasts based on user location.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small-btn" aria-label="View Weather App Demo">Demo</a>
+                                <a href="#" class="btn small-btn" aria-label="View Weather App Code">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info slide-in-left parallax">
+                        <h3 class="rotate-in">Contact Information</h3>
+                        <p>Feel free to reach out to me for collaboration or just to say hello!</p>
+                        <ul class="contact-list">
+                            <li>
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <h4>Email</h4>
+                                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div class="contact-text">
+                                    <h4>Phone</h4>
+                                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact-text">
+                                    <h4>Location</h4>
+                                    <p>New York, NY, USA</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="#" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter profile"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram profile"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form slide-in-right">
+                        <h3>Send Me a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                            </div>
+                            <button type="submit" class="btn primary-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 Your Name. All Rights Reserved.</p>
+                <p>Designed and built with <span aria-label="love" class="pulse">❤️</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cursor-effect.js"></script>
+    <script src="project-effects.js"></script>
+</body>
+</html>
